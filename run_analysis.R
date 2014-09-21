@@ -1,8 +1,8 @@
 ## msaggi@gmail.com
 ## Getting and Cleaning Data Course Project
-## all the files for the assignment are assumed to be in the `data/UCIHARDataset`
+## all the files for the assignment are assumed to be in the working directory `UCIHARDataset`. Please refer to the Readme attached to this project
 
-setwd("/Users/mohitsaggi/data/UCIHARDataset")
+## setwd("/Users/mohitsaggi/data/UCIHARDataset")
 
 ## Merges the training and the test sets to create one data set
 merge_data = function() {
