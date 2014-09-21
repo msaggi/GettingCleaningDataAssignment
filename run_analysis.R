@@ -64,6 +64,15 @@ write_tidy_set <- function(data_set) {
   ## cast the data to the tidy_data format
   tidy_data <- dcast(melted_data, formula = Subject + Activity_Id + Activity ~ variable, mean)
   
+  ## format the column names
+  col_names_vector <- colnames(tidy_data)
+  col_names_vector <- gsub("-mean()","Mean",col_names_vector,fixed=TRUE)
+  col_names_vector <- gsub("-std()","Std",col_names_vector,fixed=TRUE)
+  col_names_vector <- gsub("BodyBody","Body",col_names_vector,fixed=TRUE)
+  
+  ## put back in the tidy column names
+  colnames(tidy_data) <- col_names_vector
+  
   ## write the output into a file
   write.table(tidy_data, file="./tidyset.txt", sep="\t", row.names=FALSE)
 }
