@@ -1,8 +1,8 @@
 Getting and Cleaning Data Peer Assessment Codebook
 ==================================================
 
-merge_data function is used to load and merge test and train data
-train_data is the merged data table of the training data with the subject, activity, activity id, and the other variables
+1. merge_data function is used to load and merge test and train data
+    a) train_data is the merged data table of the training data with the subject, activity, activity id, and the other variables
 test_data is the merged data table of the test data with the subject, activity, activity id, and the other variables
 all_data is the merged version of train_data and test_data
 
